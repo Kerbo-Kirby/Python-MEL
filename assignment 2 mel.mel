@@ -1,0 +1,66 @@
+string $objects[];
+string $temp[];
+
+$temp = `polySphere -r 1 -subdivisionsX 11 -cuv 1 -ch 1`;
+stringArrayInsertAtIndex(0, $objects, $temp[0]); 
+
+move -a 5 -10 0;
+polyExtrudeFacet -kft true -ltz 2 -ls .5 .5 0 ($objects[0]+".f[40:59]");
+
+
+
+///
+$temp = `polySphere -r 1 -subdivisionsX 12 -cuv 1 -ch 1`;
+stringArrayInsertAtIndex(0, $objects, $temp[0]); 
+
+move -y 5 50 0;
+rotate 180 0 5;
+scale 2 1 2;
+polyExtrudeFacet -kft true -ltz 2 -ls .5 .5 0 ($objects[0]+".f[40:59]");
+
+$temp = `polySphere -r 1 -subdivisionsX 13 -cuv 1 -ch 1`;
+stringArrayInsertAtIndex(0, $objects, $temp[0]); 
+
+move -y 30 20 10;
+rotate 180 0 180;
+scale .5 .5  2;
+polyExtrudeFacet -kft true -ltz 2 -ls .5 .5 0 ($objects[0]+".f[40:59]");
+
+
+////
+$temp = `polySphere -r 1 -subdivisionsX 12 -cuv 1 -ch 1`;
+stringArrayInsertAtIndex(0, $objects, $temp[0]); 
+
+move -a 10 20 0;
+rotate 180 0 5;
+scale 2 1 2;
+
+
+
+///
+$temp = `duplicate -rr $objects`; 
+$objects = stringArrayCatenate($objects, $temp);
+
+move -a -10 -10 -10;
+rotate - 30 20 15;
+polyExtrudeFacet -kft true -ltz 2 -ls .5 .5 0 ($objects[0]+".f[40:59]");
+
+
+///
+print($objects);
+
+//
+polyUnite  $objects;
+
+
+delete -ch ;
+FreezeTransformations -all;
+
+rename space;
+
+
+group  -n Geometry;
+
+
+
+
