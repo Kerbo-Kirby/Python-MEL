@@ -69,37 +69,73 @@ global proc float mean(float $numbers[])
 {
     float $me = 0;
     float $mo = 0;
+    float $val = 0;
     
     for ( $i = 0; $i < size ($numbers); $i++)
 {
-        $mo =  size ($numbers);
-       
+        $mo =  `size $numbers`;
+        
         $me += $numbers[$i];
         
-         $mo /= $me;
+        $val = $me;
+        
+        $val /= $mo;
+        // $mo /= $me;
       
 }
-    return $mo;    
+    return $val;    
 }
 
-mean ({9,3,1,8,3,6});
+mean ({1,2,3});
 
 
 
 global proc float  median (float $numbers[])
 {
-    float $val = 0;
-   
-    for ( $i = 0; $i < size ($numbers); $i++)
+   float $value = 0;
+   float $val = 0;
+   for ( $i = 0; $i < size ($numbers); $i++)
 {
     
     
-//$val = $numbers[$i];
+           // $val = $numbers[$i];
+            
            $numbers = `sort $numbers`;
-           $val = $i;
+           
+           $value =`size $numbers`;
+           
+           $val = $numbers[$i];
+           
+           
+           if ( $value %2 != 0 )
+           { 
+           
+           $val /=2 ;
            
            
            
+           print "whjah";
+           
+           
+           
+           ///else( $value %2 != 0  )
+           
+           ///{
+               
+          // }
+               
+              print "lolol";
+              
+               
+           }
+           
+           
+           
+// $value /= $i;
+  
+// $numbers = $value;
+           
+           print $val;
            
 }
 
@@ -107,6 +143,6 @@ global proc float  median (float $numbers[])
     
 }
 
-  median ({5,42,90,7});
+  median ({5,7,12});
 
 
