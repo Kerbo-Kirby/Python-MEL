@@ -36,7 +36,7 @@ subtract ({4,4});
 
 
 
-global proc float pow  (float $numbers[])
+global proc float multi (float $numbers[])
 
 {
     float $mul = 1;
@@ -49,7 +49,7 @@ global proc float pow  (float $numbers[])
     
 }
 
-
+   multi({2,2});
 
 
 global proc float divide (float $numbers[])
@@ -109,6 +109,18 @@ global proc float mode(float $numbers[])
      
            if($numbers[$i] == $numbers[$j])
       {
+            //$vali /=2;
+          
+        // $value /= 2;
+        // $vali = $value;
+       // $mid = $i;
+         //size($numbers)   / 2;
+           
+              //  $mid = $vali;
+
+         // else(size($numbers)% 2 == 0)
+         // $mid;
+       // $value /= 2;
           
           
       }
@@ -128,35 +140,37 @@ global proc float median (float $numbers[])
    float $value = 0;
    float $vali = 0;
    
-   
+   float $something;
    float $mid = 0;
    
-   
+   float $medain;
    for ( $i = 0; $i < size ($numbers); $i++)
 {
-    
-    
-            
-           $sortt = `sort $numbers`;
+   
+          // $sortt = `sort $numbers`;
            
            $value =`size $numbers`;
            
-             $vali = $numbers[$i];
+        $medain = $numbers[$i];
+       
+           //
            
           
-           if ( $value % 2 != 0 )
+          
+           if ($value % 2 != 0)
           { 
           
-         $mid = $value /= 2;
+          $something = $value %= 2;
           
-           //$vali /= 2;
+          $medain /= $something;
+          $mid = $medain;
+          
+    // $mid = $numbers[$i];
+     
+        
+        
            
-         //  $mid = $value /= $vali;
-      // $mid = $vali /= 2 ;
-           
-           //$mid = $val;
-           
-          // print "  whjah  ";
+           print "  whjah  ";
            
            
        }
@@ -168,7 +182,6 @@ global proc float median (float $numbers[])
     
 }
 
-  median ({45,55,2,10,0});
+  median ({1,2,3,4,5});
   
   
- 
