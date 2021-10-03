@@ -3,7 +3,7 @@ global float $answer;
 
 
 
-global proc float Add(float $numbers[])
+global proc float  Add(float $numbers[])
 {
     float $num = 0;
     
@@ -15,7 +15,7 @@ global proc float Add(float $numbers[])
     
 }
 
-$answer = Add({4,2,90,7});
+$answer =  Add({4,2,90,7});
 
 
 
@@ -191,4 +191,19 @@ global proc float median (float $numbers[])
 
   median ({1,4,5});
   
-  
+  global proc float master (float $numbers[])
+  {
+      
+      
+     float Add;
+      
+    float carry;
+    
+    
+      
+    }
+    
+    return Add;  
+      
+}
+   
