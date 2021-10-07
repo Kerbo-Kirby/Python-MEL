@@ -1,8 +1,4 @@
 
-global float $answer;
-
-
-
 global proc float  Add(float $numbers[])
 {
     float $num = 0;
@@ -14,9 +10,6 @@ global proc float  Add(float $numbers[])
     return $num;
     
 }
-
-$answer =  Add({4,2,90,7});
-
 
 
 global proc float subtract  (float $numbers[])
@@ -32,11 +25,8 @@ global proc float subtract  (float $numbers[])
     
 }
 
-subtract ({4,4});
 
-
-
-global proc float multi (float $numbers[])
+global proc float  multi (float $numbers[])
 
 {
     float $mul = 1;
@@ -49,10 +39,9 @@ global proc float multi (float $numbers[])
     
 }
 
-   multi({2,2});
 
 
-global proc float divide (float $numbers[])
+global proc float  divide (float $numbers[])
 
 {
     float $Div = $numbers[0];
@@ -65,7 +54,7 @@ global proc float divide (float $numbers[])
     
 }
 
-global proc float mean(float $numbers[])
+global proc float mean (float $numbers[])
 {
     float $me = 0;
     float $mo = 0;
@@ -86,7 +75,6 @@ global proc float mean(float $numbers[])
     return $val;    
 }
 
-mean ({1,2,3});
   
   
 global proc float mode(float $numbers[])
@@ -123,23 +111,22 @@ global proc float mode(float $numbers[])
 
 mode({4,4,4,2,2,2,7,7,7,7,7});
 
-global proc float powo(float $numbers[])
+global proc float  power (float $numbers[])
 {
-    float $sum = 1;
-    float $lump = 0 ;
-    float $go= 1;
+    ;
+    
+    float $mul = $numbers[0];
     
     for ( $i = 0; $i<size ($numbers); $i++)
 {
-  //  $sum = $lump = $numbers[$i];
-   //  $go = pow($sum, $lump );
-        
+  
+        $mul *= $numbers[$i];
         
 }
-    return $go;
+    return $mul;
     
 }
- powo({4,2});
+
 
 
 global proc float median (float $numbers[])
@@ -191,19 +178,61 @@ global proc float median (float $numbers[])
 
   median ({1,4,5});
   
-  global proc float master (float $numbers[])
-  {
-      
-      
-     float Add;
-      
-    float carry;
+
+global proc float calc (string $call, float $operation[])
+{
+   
     
-    
-      
+   
+    if($call == "add")
+    {
+ 
+       
+     return Add($operation);
+     
     }
     
-    return Add;  
-      
-}
+  if($call == "subtract")
+  
+    {
+        
+        return subtract($operation);
+        
+    }
+    if($call == "multiply")
    
+    {
+        
+        return multi($operation);
+        
+    }
+    
+    if($call == "divide")
+   
+    {
+        
+        return divide($operation);
+        
+    }
+    
+    if($call == "mean")
+   
+    {
+        
+        return mean($operation);
+        
+    }
+    
+     if($call == "power")
+   
+    {
+        
+        return power($operation);
+        
+    }
+    
+}
+
+
+
+calc("power", {4});

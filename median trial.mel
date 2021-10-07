@@ -1,0 +1,64 @@
+
+
+
+global proc float median (float $numbers[])
+{
+   int $value = 0;
+   float $low = 0;
+   int $high = 0;
+  
+   for ( $i = 0; $i < size ($numbers); $i++)
+{
+   
+          $numbers = `sort $numbers`;
+           
+       
+          
+           if ($value % 2 == 0)
+          { 
+          
+           $value = size($numbers) / 2;
+          return $numbers [$value];
+         
+           
+       }
+       if($value % 2 == 1 )
+         {
+             
+             //$low += $high;
+            // $numbers[i] = $low;
+            
+            for($j = $i +1 ; $j < size ($numbers); $j++)
+      
+      {
+       
+       
+  //  $val = $numbers[$i];
+     
+     If( size($numbers[j]
+ 
+        print (" dj");
+            
+            
+            
+            
+            }
+             
+            //  $value = size($numbers) / 2 -1;
+              
+            // $value = $low += $high;
+             
+             
+             
+             return $numbers [$high];
+         }    
+           
+}
+
+    //return $numbers [$value];
+    
+}
+
+  median ({4,7,3,9});
+  
+

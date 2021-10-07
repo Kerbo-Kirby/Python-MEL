@@ -1,0 +1,62 @@
+
+
+
+
+
+global proc float Add  (float $numbers[])
+{
+    float $num = 0;
+    
+    for ( $i = 0; $i<size ($numbers); $i++)
+{
+        $num += $numbers[$i];
+}
+    return $num;
+  }  
+ Add  ({4,2,90,7});
+
+
+
+global proc float subtract (float $numbers[])
+
+{
+    float $diff = $numbers[0];
+    
+    for ( $i = 1; $i<size ($numbers); $i++)
+{
+        $diff -= $numbers[$i];
+}
+    return $diff;
+    
+}
+
+subtract ({4,4});
+
+
+
+global proc float calc (string $call, float $operation[])
+{
+    //float $po;
+    
+   
+    if($call == "wha")
+    {
+        // $po[0];
+     //$po[] = subtract($operation); 
+          
+       
+     return Add($operation);
+      //return subtract($operation);
+       //return $po;
+    }
+    
+  if($call == "wa")
+   // return $operation;
+    {
+        
+        return subtract($operation);
+        //return $po;
+    }
+}
+
+calc("wha", {1,2});
