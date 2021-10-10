@@ -1,0 +1,24 @@
+global proc float  randmon ( int $amount, float $minX, float $minY , float $minZ, float maxX, float $maxY, float maxZ)
+{
+    
+    
+    string $objects[] = ls -sl;
+    
+    for($i = 0, $i , size $i ($objects); $i++;)
+    
+    {
+        
+        for $j = 0; $j < $amount; $j++;)
+        {
+        string $what = duplicate $objects[$i];
+        
+        float $minZ = rand; 
+        
+        }
+        
+    }
+    
+    
+    
+    }
+}

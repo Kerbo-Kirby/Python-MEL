@@ -254,5 +254,5 @@ global proc float[] calc (string $call, float $operation[])
 }
 
 
-
+    
 calc("median", {1,1,5,5});

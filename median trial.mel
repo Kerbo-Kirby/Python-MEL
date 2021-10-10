@@ -3,12 +3,10 @@
 
 global proc float median (float $numbers[])
 {
-   int $value = 0;
-  // int$low = 0;
-  //   int $high = 0;
-  
+   float $value = 0;
 
-     int $mySize = size($numbers);
+
+  int $mySize = size($numbers);
    
      $numbers = `sort $numbers`;
            
@@ -16,9 +14,11 @@ global proc float median (float $numbers[])
           
            if ($mySize % 2 == 0)
           { 
-          int $high = size($numbers) / 2-1;
-               int $low = $high -1;
-                $value = ($numbers[$high] + $numbers[$low]) /2;
+          int $high = ($mySize / 2);
+          
+          int $low = $high - 1;
+          
+          $value = ($numbers[$high] + $numbers[$low]) / 2;
            
          }
            
@@ -37,6 +37,6 @@ global proc float median (float $numbers[])
 
 }
 
-  median ({4,5,69});
+  median ({1,3,3,6,8,9});
   
 
