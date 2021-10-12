@@ -1,24 +1,30 @@
-global proc float  randmon ( int $amount, float $minX, float $minY , float $minZ, float maxX, float $maxY, float maxZ)
+global proc ran( int $amount, float $minX, float $minY , float $minZ, float $maxX, float $maxY, float $maxZ)
 {
+    select -r pSphere1 ;
     
+
+   
     
-    string $objects[] = ls -sl;
-    
-    for($i = 0, $i , size $i ($objects); $i++;)
+    string $objects[] = `ls -sl`;
+      
+    for($i = 0; $i<size($objects); $i++)
     
     {
         
-        for $j = 0; $j < $amount; $j++;)
+        for ($j = 0; $j < $amount; $j++)
+        
         {
-        string $what = duplicate $objects[$i];
+        string $dupli = `duplicate $objects[$i]`;
         
-        float $minZ = rand; 
-        
+        float $x = `rand $minX $maxX`;
+      
         }
+       
         
     }
     
-    
-    
-    }
+
+     
 }
+//ran({1});
+  
