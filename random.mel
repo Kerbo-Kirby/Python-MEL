@@ -3,7 +3,10 @@ global proc ran( int $amount, float $minX, float $minY , float $minZ, float $max
    
    
     select -r pSphere1 ;
+       
     
+
+
 
         float $x ;
         float $y ;
@@ -25,7 +28,7 @@ global proc ran( int $amount, float $minX, float $minY , float $minZ, float $max
         float $y = `rand $minY $maxY`;
         float $z = `rand $minZ $maxZ`;
         
-        move($dupli) -x $x -y $y -z $z;
+        move $x $y $z;
         }
        
         
@@ -34,5 +37,5 @@ global proc ran( int $amount, float $minX, float $minY , float $minZ, float $max
 
      
 }
-ran(1,7,8,9,9,8,6);
+ran(1,7,2,9,0,8,4);
   
