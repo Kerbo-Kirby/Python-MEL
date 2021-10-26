@@ -21,5 +21,6 @@ cmds.polySphere(r=.09)
 cmds.move(.2,2.6,.45)
 cmds.polySphere(r=.09)
 cmds.move(-.2,2.6,.45)
-cmds.polyExtrudeFacet( 'pSphere7.f[174]',
- kft=False, ltz=2, ls=(.5, .5, 0) )
+cmds.group( 'pCylinder2' ,'pSphere4',' pSphere3' ,'pCylinder1' ,'pSphere6',
+' pSphere7', 'pSphere5' ,'pSphere2', 'pSphere1', 'pCylinder3')
+cmds.rename('snowman')
