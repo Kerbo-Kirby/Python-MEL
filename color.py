@@ -1,16 +1,17 @@
 import maya.cmds as cmds
 
+sels = cmds.ls(sl=True)
 
+
+
+
+for sel in sels:
     
-    #selection
-    sels = cmds.ls(sl=True)
+    shapes = cmds.listRelatives(sel, children=True,shapes=True)
+    
+    cmds.setAttr("nurbsCircleShape1.overrideColor",13)
     
     
-    #string
-   
-    #txt.partition('##')
-    #iterates
-    for i, sel in enumerate(sels): 
-         
-cmds.colorIndex( 1, q=True, hsv=True )
-print("heell)
+    cmds.group( 'nurbsCircle1' ,'nurbsCircle2',' nurbsCircle3' )
+    cmds.rename("group1","root")
+    print(sel + " head " + ' ctrl_ '.join(shapes))
