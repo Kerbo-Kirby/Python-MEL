@@ -20,4 +20,4 @@ def renameFunc(txt):
        #replaces the string with the iteration number, starts at 0
        #txt.replace(txt.partition('##'),str(i).zfill)
        print(txt)
-renameFunc("leg_##_jnt")
+renameFunc("head_ctrl_##")

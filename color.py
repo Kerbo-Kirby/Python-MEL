@@ -1,7 +1,7 @@
 import maya.cmds as cmds
 
 sels = cmds.ls(sl=True)
-
+cmds.circle("rootie")
 cmds.group( 'nurbsCircle1' ,'nurbsCircle2',' nurbsCircle3')
 cmds.rename("group1","root")
 
