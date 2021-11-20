@@ -3,9 +3,9 @@ import maya.cmds as cmds
 
 #cmds.select(all=True)
 sels = cmds.ls(sl=True)
-cmds.circle("rootie")
+#cmds.circle("rootie")
 #cmds.group( 'nurbsCircle1' ,'nurbsCircle2',' nurbsCircle3')
-cmds.rename("group1","root")
+#cmds.rename("group1","root")
 
 
 for sel in sels:
