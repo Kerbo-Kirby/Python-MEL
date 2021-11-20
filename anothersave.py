@@ -1,6 +1,7 @@
 import maya.cmds as cmds
 
 
+
 curvesSelec = cmds.ls(type='nurbsCurve')
 
 
@@ -34,4 +35,4 @@ if not sels:
     cmds.DeleteHistory(all=True)
    # cmds.group("base ctrl",n="rooer")   
       
-               
+
