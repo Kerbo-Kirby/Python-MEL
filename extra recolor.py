@@ -11,7 +11,7 @@ for sel in sels:
     cmds.rename(sels,"head_ctrl")
    # suppose to change color
     cmds.setAttr("head_ctrlShape"+".overrideEnabled", 1)
-    cmds.setAttr("head_ctrlShape.overrideColor",13)
+    cmds.setAttr("head_ctrlShape.overrideColor",19)
     
     cmds.DeleteHistory()
     

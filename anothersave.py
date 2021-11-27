@@ -1,7 +1,6 @@
 import maya.cmds as cmds
 
 
-
 curvesSelec = cmds.ls(type='nurbsCurve')
 
 

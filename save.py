@@ -1,12 +1,14 @@
 import maya.cmds as cmds
 
-def my_reColor(selec):
+def recolorFun()
+
+
+selec = cmds.ls(sl=True)
     
-  selec = cmds.ls(sl=True)
-  
-  cmds.setAttr('selecShape'+".overrideEnabled", 1)
-  cmds.setAttr('selecShape'+".overrideColor",17)
-  
-  print("its kinda working")
-  
-my_reColor(selec)
+    cmds.setAttr('selecShape'+".overrideEnabled",1)
+    cmds.setAttr('selecShape'+".overrideColor",17)
+    
+    print("its kinda working")
+    
+recolorFun()
+
