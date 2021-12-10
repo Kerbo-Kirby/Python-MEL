@@ -1,12 +1,19 @@
 import maya.cmds as cmds
 
-myWindow = cmds.window( title=" my window ", widthHeight=(200, 55) )
+
+window = cmds.window( title=" my window ", widthHeight=(200, 55) )
 
 cmds.columnLayout( adjustableColumn=True )
 
-cmds.button( label=' my button')
-cmds.button( label=' Close ', command=('cmds.deleteUI(\"' + window + '\", window=True)') )
+cmds.button( label='Polysphere button', command = 'cmds.polySphere()', bgc=(.2,.3,1))
 
-cmds.floatSlider()
+cmds.button( label=' Close ', bgc=(1,.5,.9),command=('cmds.deleteUI(\"' + window + '\", window=True)'))
+
+cmds.text( label='Name',  )
 
 cmds.showWindow( window )
+
+
+
+
+
