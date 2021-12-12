@@ -1,7 +1,7 @@
 import maya.cmds as cmds
 
 # if my selections are true
-
+ 
 sels = cmds.ls(sl=True)
 
 #cmds.rename("head ctrl_")

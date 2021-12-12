@@ -1,7 +1,7 @@
 import maya.cmds as cmds
 
 sels = cmds.ls(sl=True)
-
+ 
 cmds.circle(n="rootie")
 
 cmds.group("rootie",n="root")
