@@ -8,7 +8,6 @@ sels = cmds.ls(sl=True)
 
 
 
-
 if sels:
     
     for sel in curvesSelec:
