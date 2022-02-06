@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
-//Name: takoto.ma
-//Last modified: Fri, Feb 04, 2022 11:44:00 PM
+//Name: new tackotoo.ma
+//Last modified: Fri, Feb 04, 2022 11:44:49 PM
 //Codeset: 1252
 file -rdi 1 -ns "Takoto_Model" -rfn "Takoto_ModelRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/peyto/Documents/Takoto_Model.ma";
@@ -16,7 +16,7 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202102181415-29bfc1879c";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19042)";
-fileInfo "UUID" "56114151-4D13-D318-4A23-E5B8D2F5EBD0";
+fileInfo "UUID" "880AB243-4B08-7FFB-BFBF-A5A2D1CECFE8";
 createNode transform -s -n "persp";
 	rename -uid "BB09B6FE-4452-DDB1-C85E-2C8D8BA4C88A";
 	setAttr ".v" no;
@@ -7005,7 +7005,19 @@ createNode parentConstraint -n "R_Palm_F_parentConstraint2" -p "R_Palm_F";
 	setAttr ".rst" -type "double3" 0 -1.4210854715202004e-14 0 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "Takoto_ModelRNfosterParent1";
-	rename -uid "87732E5E-47F8-A098-2121-96B17EB59012";
+	rename -uid "F010F8EA-4AFC-6BE6-43D7-61BE82D238F3";
+createNode mesh -n "Takoto_GeoShapeDeformed" -p "Takoto_ModelRNfosterParent1";
+	rename -uid "164FECE0-4A92-4BA3-8F0E-8FBA66C37509";
+	setAttr -k off ".v";
+	setAttr -s 18 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.27090463042259216 -0.59124481678009033 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode mesh -n "Takoto_GeoShapeOrigTag" -p "Takoto_ModelRNfosterParent1";
 	rename -uid "C413469A-4522-5306-77FD-65957D5705BF";
 	setAttr -k off ".v";
@@ -7140,18 +7152,6 @@ createNode mesh -n "Takoto_GeoShapeOrigTag" -p "Takoto_ModelRNfosterParent1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "Takoto_GeoShapeDeformed" -p "Takoto_ModelRNfosterParent1";
-	rename -uid "164FECE0-4A92-4BA3-8F0E-8FBA66C37509";
-	setAttr -k off ".v";
-	setAttr -s 18 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.27090463042259216 -0.59124481678009033 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "0301672F-4CC6-6895-5C03-3588DA7FD80B";
 	setAttr -s 12 ".lnk";
@@ -7227,9 +7227,9 @@ createNode reference -n "Takoto_ModelRN";
 		"Takoto_ModelRN"
 		"Takoto_ModelRN" 0
 		"Takoto_ModelRN" 52
-		0 "|Takoto_ModelRNfosterParent1|Takoto_GeoShapeDeformed" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo" 
-		"-s -r "
 		0 "|Takoto_ModelRNfosterParent1|Takoto_GeoShapeOrigTag" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo" 
+		"-s -r "
+		0 "|Takoto_ModelRNfosterParent1|Takoto_GeoShapeDeformed" "|Takoto_Model:Takoto|Takoto_Model:Geometry|Takoto_Model:Takoto_Geo" 
 		"-s -r "
 		2 "|Takoto_Model:Takoto" "visibility" " 1"
 		2 "|Takoto_Model:Takoto" "rotate" " -type \"double3\" 0 0 0"
@@ -12682,4 +12682,4 @@ connectAttr "pasted__file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "pasted__file1.oc" ":internal_standInShader.ic";
-// End of takoto.ma
+// End of new tackotoo.ma
